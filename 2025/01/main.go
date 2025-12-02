@@ -54,8 +54,9 @@ func part1() {
 	fmt.Println("Number of Zeroes:", zeroCount)
 }
 
+// Count the number of times the dial touches zero, whether it crosses it or lands on it.
+// Solution achieved with the help of GitHub Copilot (Gemini 2.5 Pro).
 func part2Division() {
-	// Solution achieved with the help of GitHub Copilot (Gemini 2.5 Pro).
 	var zeroCount int
 	currentPos := 50 // Starting position
 
@@ -99,6 +100,7 @@ func part2Division() {
 	fmt.Println("Number of Zeroes:", zeroCount)
 }
 
+// Count the number of times the dial touches zero, whether it crosses it or lands on it.
 func part2Brute() {
 	var zeroCount uint32
 	currentPos := 50 // Given in instructions

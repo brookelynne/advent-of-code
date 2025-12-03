@@ -16,13 +16,14 @@ const (
 	newline  = "\n"
 )
 
+// Day 1: Unlock the base.
 func main() {
 	part1()
 	part2Division()
 	part2Brute()
 }
 
-// Count the number of times the dial lands on zero.
+// part1 counts the number of times the dial lands on zero.
 func part1() {
 	var zeroCount uint32
 	currentPos := 50 // Given in instructions
@@ -54,7 +55,7 @@ func part1() {
 	fmt.Println("Number of Zeroes:", zeroCount)
 }
 
-// Count the number of times the dial touches zero, whether it crosses it or lands on it.
+// part2Division counts the number of times the dial touches zero, whether it crosses it or lands on it, using math.
 // Solution achieved with the help of GitHub Copilot (Gemini 2.5 Pro).
 func part2Division() {
 	var zeroCount int
@@ -100,7 +101,7 @@ func part2Division() {
 	fmt.Println("Number of Zeroes:", zeroCount)
 }
 
-// Count the number of times the dial touches zero, whether it crosses it or lands on it.
+// part2Brute counts the number of times the dial touches zero, whether it crosses it or lands on it, using a brute-force solution.
 func part2Brute() {
 	var zeroCount uint32
 	currentPos := 50 // Given in instructions
@@ -142,5 +143,4 @@ func part2Brute() {
 	}
 
 	fmt.Println("Number of Zeroes:", zeroCount)
-
 }

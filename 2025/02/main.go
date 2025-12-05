@@ -17,24 +17,17 @@ const (
 
 // Day 2: Invalid IDs
 func main() {
-	example := getExampleFile()
+	example := getLocalFile(exampleFilename)
 	fmt.Println("Part 1 (example):", Part1(example))
 	fmt.Println("Part 2 (example):", Part2(example))
 
-	input := getInputFile()
+	input := getLocalFile(inputFilename)
 	fmt.Println("Part 1 (input):", Part1(input))
 	fmt.Println("Part 2 (input):", Part2(input))
 }
 
-func getInputFile() string {
-	input, err := os.ReadFile(inputFilename)
-	if err != nil {
-		log.Fatal(err)
-	}
-	return string(input)
-}
-func getExampleFile() string {
-	input, err := os.ReadFile(exampleFilename)
+func getLocalFile(filename string) string {
+	input, err := os.ReadFile(filename)
 	if err != nil {
 		log.Fatal(err)
 	}

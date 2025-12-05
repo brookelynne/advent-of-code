@@ -6,11 +6,11 @@ import (
 
 func Test_Part1(t *testing.T) {
 	const exampleExpected = 1227775554
-	if r := Part1(getExampleFile()); r != exampleExpected {
+	if r := Part1(getLocalFile(exampleFilename)); r != exampleExpected {
 		t.Errorf("Expected %d, got %d", exampleExpected, r)
 	}
 	const inputExpected = 16793817782
-	if r := Part1(getInputFile()); r != inputExpected {
+	if r := Part1(getLocalFile(inputFilename)); r != inputExpected {
 		t.Errorf("Expected %d, got %d", inputExpected, r)
 	}
 }
@@ -42,7 +42,7 @@ func Test_Part2(t *testing.T) {
 		input string
 		want  int
 	}{
-		{getExampleFile(), 4174379265},
+		{getLocalFile(exampleFilename), 4174379265},
 		{"11-22", 11 + 22},
 		{"95-115", 99 + 111},
 		{"998-1012", 999 + 1010},
